@@ -1711,9 +1711,15 @@ footer small {
   }
   .deals {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
   .deal {
     min-height: 480px;
+    transform: none;
+  }
+  .deal:nth-child(2),
+  .deal:nth-child(2):hover {
+    transform: none;
   }
   .deal-media {
     height: 260px;
