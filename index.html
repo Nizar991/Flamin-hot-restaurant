@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FLAMIN HOT — Halifax's Hottest Kitchen</title>
+    <meta
+      name="description"
+      content="Halal pizzas, burgers, doner and shakes in Halifax. Hot, fresh and ready."
+    />
+    <link rel="icon" href="assets/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="loader" aria-hidden="true">
+      <img src="assets/logo.svg" alt="" />
+      <div class="loader-line"><i></i></div>
+      <p>Firing up the grill</p>
+    </div>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header id="top">
+      <a href="#top" class="logo" aria-label="Flamin Hot home"
+        ><img src="assets/logo.svg" alt="Flamin Hot"
+      /></a>
+      <nav>
+        <a href="#deals">Deals</a>
+        <a href="#menu">Menu</a>
+        <a href="#story">Our flavour</a>
+        <a href="#find">Find us</a>
+      </nav>
+      <div class="header-actions">
+        <span id="status" class="status"></span>
+        <button id="cartBtn" class="cart-btn" aria-label="Open basket">
+          Basket <span id="count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div id="embers"></div>
+        <div class="hero-copy">
+          <p class="eyebrow"><i></i> Halal · Halifax · 7 days</p>
+          <h1>
+            <span>Hotter</span><span>Than</span><span class="heat">Ever.</span>
+          </h1>
+          <p class="sub">Big flavour. Fresh every time.<br />No excuses.</p>
+          <div class="cta">
+            <a href="#menu" class="btn"><span>See the menu</span><b>↘</b></a>
+            <a href="tel:01422340300" class="text-link"
+              >Call to order <b>01422 340300</b></a
+            >
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Flamin Hot signature meal">
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <div class="heat-disc">
+            <div class="disc-ring"></div>
+            <div class="pizza">
+              <i></i><i></i><i></i><i></i><i></i><i></i>
+              <div class="pizza-crust"></div>
+            </div>
+          </div>
+          <div class="stamp"><strong>100%</strong><span>HALAL</span></div>
+        </div>
+      </section>
+
+      <div class="ticker" aria-label="Flamin Hot highlights">
+        <div>
+          <span>HALAL KITCHEN</span><b>✦</b><span>FRESH DAILY</span><b>✦</b
+          ><span>BIG FLAVOUR</span><b>✦</b> <span>HALAL KITCHEN</span><b>✦</b
+          ><span>FRESH DAILY</span><b>✦</b><span>BIG FLAVOUR</span><b>✦</b>
+        </div>
+      </div>
+
+      <section id="deals" class="deals-section">
+        <div class="section-heading">
+          <h2>Bring the heat.</h2>
+        </div>
+        <div class="deals" id="dealGrid"></div>
+      </section>
+
+      <section id="menu" class="menu-section">
+        <div class="section-heading menu-heading">
+          <div>
+            <p>02 / THE MENU</p>
+            <h2>Choose your damage.</h2>
+          </div>
+          <label class="search-box"
+            ><span>⌕</span
+            ><input
+              id="search"
+              type="search"
+              placeholder="Search the menu"
+              aria-label="Search menu"
+          /></label>
+        </div>
+        <div class="tabs" id="tabs"></div>
+        <div class="grid" id="grid"></div>
+        <p class="note">
+          Please tell us about any allergies or intolerances before ordering.
+        </p>
+      </section>
+
+      <section id="delivery" class="delivery-section">
+        <div class="delivery-heading">
+          <p>ORDER THE EASY WAY</p>
+          <h2>Still hot.<br />Wherever you are.</h2>
+        </div>
+        <div class="delivery-grid">
+          <a
+            class="delivery-card uber"
+            href="https://www.ubereats.com/gb/search?q=Flamin%20Hot%20Halifax"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="delivery-logo">Uber <b>Eats</b></span>
+            <span class="delivery-arrow">↗</span>
+            <span class="delivery-mark" aria-hidden="true">
+              <img src="https://cdn.simpleicons.org/ubereats/081b12" alt="" />
+            </span>
+            <p>Delivering the heat</p>
+          </a>
+          <a
+            class="delivery-card deliveroo"
+            href="https://deliveroo.co.uk/search?q=Flamin%20Hot%20Halifax"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="delivery-logo"><b>deliveroo</b></span>
+            <span class="delivery-arrow">↗</span>
+            <span class="delivery-mark" aria-hidden="true">
+              <img src="https://cdn.simpleicons.org/deliveroo/0b2422" alt="" />
+            </span>
+            <p>At your door, fast</p>
+          </a>
+          <a
+            class="delivery-card justeat"
+            id="justEatDelivery"
+            href="https://www.just-eat.co.uk/restaurants-flamin-hot-halifax-hx1/menu"
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="delivery-logo">JUST <b>EAT</b></span>
+            <span class="delivery-arrow">↗</span>
+            <span class="delivery-mark justeat-mark" aria-hidden="true">
+              <img src="https://cdn.simpleicons.org/justeat/201000" alt="" />
+            </span>
+            <p>Your local favourite</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="story" class="story">
+        <div class="story-word">LOUD</div>
+        <div class="story-panel">
+          <h2>Halal.<br />Fresh.<br /><em>Fearless.</em></h2>
+          <div class="story-copy">
+            <p>
+              Properly loaded pizzas, loaded fries and burgers that don't
+              whisper. Made hot in Halifax, every day.
+            </p>
+            <a href="#find" class="story-find-btn"
+              ><span>Come find us</span><b>↘</b></a
+            >
+          </div>
+        </div>
+        <div class="flame-stack" aria-hidden="true"><i></i><i></i><i></i></div>
+      </section>
+
+      <section id="reviews" class="reviews">
+        <div class="section-heading">
+          <h2>People talk.</h2>
+        </div>
+        <div class="rev" id="revGrid"></div>
+      </section>
+
+      <section id="find" class="find-section">
+        <div class="find">
+          <div class="find-copy">
+            <p>05 / FIND US</p>
+            <h2>Hungry?<br />We're close.</h2>
+            <address>67 Parkinson Ln<br />Halifax HX3 0JL</address>
+            <a class="phone" href="tel:01422340300">01422 340300</a>
+            <table>
+              <tr>
+                <td>Sun — Thu</td>
+                <td>12pm — 11pm</td>
+              </tr>
+              <tr>
+                <td>Fri — Sat</td>
+                <td>12pm — 12am</td>
+              </tr>
+            </table>
+            <div class="cta">
+              <a
+                class="btn"
+                href="https://www.google.com/maps/dir/?api=1&destination=67+Parkinson+Ln+Halifax+HX3+0JL"
+                target="_blank"
+                rel="noopener"
+                ><span>Get directions</span><b>↗</b></a
+              >
+              <a class="btn ghost" id="justLink" target="_blank" rel="noopener"
+                >Just Eat</a
+              >
+            </div>
+            <form id="contact">
+              <h3>Send us a message</h3>
+              <input required name="name" placeholder="Your name" />
+              <input
+                required
+                name="email"
+                type="email"
+                placeholder="Email address"
+              />
+              <textarea
+                required
+                name="message"
+                placeholder="What's on your mind?"
+              ></textarea>
+              <button class="btn" type="submit">
+                <span>Send message</span><b>↗</b>
+              </button>
+              <p id="sent" hidden>Message received. Thanks!</p>
+            </form>
+          </div>
+          <iframe
+            title="Map"
+            loading="lazy"
+            src="https://www.google.com/maps?q=67+Parkinson+Ln+Halifax+HX3+0JL&output=embed"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <img src="assets/logo.svg" alt="Flamin Hot" />
+      <p>Great food. Tasty treats. Hotter than ever.</p>
+      <div>
+        <a href="#">Instagram</a><a href="#">Snapchat</a><a href="#">TikTok</a>
+      </div>
+      <small>© 2026 Flamin Hot Halifax</small>
+    </footer>
+
+    <div class="bar">
+      <a href="tel:01422340300">Call</a><a href="#menu">Order</a
+      ><a href="#find">Directions</a>
+    </div>
+    <aside id="drawer" aria-hidden="true">
+      <div class="dh">
+        <div>
+          <p>Your order</p>
+          <h3>The basket</h3>
+        </div>
+        <button id="close" aria-label="Close">×</button>
+      </div>
+      <div id="items"></div>
+      <div class="tot"><span>Total</span><b id="total">£0.00</b></div>
+      <form id="co">
+        <div class="seg">
+          <label
+            ><input type="radio" name="m" value="Collection" checked />
+            Collection</label
+          ><label
+            ><input type="radio" name="m" value="Delivery" /> Delivery</label
+          >
+        </div>
+        <input required name="n" placeholder="Name" />
+        <input required name="p" type="tel" placeholder="Phone" />
+        <textarea name="x" placeholder="Notes or allergies"></textarea>
+        <button class="btn" type="submit">
+          <span>Place demo order</span><b>↗</b>
+        </button>
+        <small>Demo only — no payment is taken.</small>
+      </form>
+      <div id="done" hidden>
+        <p>CONFIRMED</p>
+        <h3>Order placed.</h3>
+        <b id="ref"></b
+        ><button class="btn" id="again">
+          <span>Back to menu</span><b>↘</b>
+        </button>
+      </div>
+    </aside>
+    <div id="veil"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
